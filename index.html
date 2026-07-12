@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>甜玉米小说</title>
+    <script>
+      const pathname = window.location.pathname;
+      const basePath = '/wirting';
+      if (pathname !== '/' && pathname !== basePath && pathname !== basePath + '/') {
+        const routePath = pathname.startsWith(basePath) ? pathname.substring(basePath.length) : pathname;
+        const search = window.location.search;
+        const hash = window.location.hash;
+        window.location.replace(basePath + '/#' + routePath + search + hash);
+      }
+    </script>
+    <script type="module" crossorigin src="/wirting/assets/index-BmKBFNsn.js"></script>
+    <link rel="stylesheet" crossorigin href="/wirting/assets/index-ByXJMA9X.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
